@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://noncardosomotos.com.br/sitemap.xml

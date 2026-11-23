@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NON Moto Peças, Mecânica &amp; Preparações | Guarulhos</title>
+  <meta name="description" content="Alinhamento, carburação, elétrica, escapamento, injeção eletrônica, limpeza, motor, peças em geral, suspensão e troca de óleo em Guarulhos. Orçamento direto pelo WhatsApp (11) 94039-7294." />
+  <meta name="theme-color" content="#0B0B0D" />
+
+  <meta property="og:title" content="NON — Moto Peças, Mecânica &amp; Preparações" />
+  <meta property="og:description" content="Mecânica, preparações e peças para motos em Guarulhos. Orçamento direto no WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://noncardosomotos.com.br" />
+  <meta property="og:image" content="https://noncardosomotos.com.br/assets/img/og-preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind compilado (sem CDN, sem JS de runtime) -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!--
+    SEO LOCAL — preencher quando tiver os dados exatos do perfil do Google:
+    streetAddress, postalCode, geo.latitude, geo.longitude e openingHoursSpecification.
+    O endereço e o telefone DEVEM ser idênticos aos do Google Meu Negócio.
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MotorcycleRepair",
+    "@id": "https://noncardosomotos.com.br/#oficina",
+    "name": "NON Moto Peças, Mecânica & Preparações",
+    "image": "https://noncardosomotos.com.br/assets/img/oficina-hero.jpg",
+    "telephone": "+5511940397294",
+    "url": "https://noncardosomotos.com.br",
+    "priceRange": "$$",
+    "areaServed": ["Guarulhos", "Grande São Paulo"],
+    "sameAs": [
+      "https://www.instagram.com/non_motos_/",
+      "https://share.google/2DTcoq9zr0nIPFWyP"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Guarulhos",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+</head>
+<body class="bg-darkbg text-slate-100 font-sans antialiased selection:bg-nonorange selection:text-slate-950">
+
+  <!-- HEADER FIXO -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-darkbg/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <img
+          src="./assets/img/logo-non.webp"
+          alt="Logo NON Moto Peças, Mecânica e Preparações"
+          width="40" height="40"
+          class="w-10 h-10 rounded-lg object-cover border border-nonorange/40"
+        />
+        <div class="leading-tight">
+          <span class="block font-display font-extrabold text-xl tracking-wide uppercase text-white group-hover:text-nonorange transition">
+            NON <span class="text-nonorange">Motos</span>
+          </span>
+          <span class="block text-[10px] uppercase tracking-widest text-slate-400">
+            Moto Peças • Mecânica &amp; Preparações
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#servicos" class="hover:text-nonorange transition">Serviços</a>
+        <a href="#oficina" class="hover:text-nonorange transition">A Oficina</a>
+        <a href="#avaliacoes" class="hover:text-nonorange transition">Avaliações</a>
+        <a href="#localizacao" class="hover:text-nonorange transition">Localização</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a
+          href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20NON%20Motos%20e%20gostaria%20de%20um%20or%C3%A7amento."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-whatsapp hover:bg-whatsapphover text-slate-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-lg transition shadow-lg shadow-whatsapp/20"
+        >
+          <span>Chamar no WhatsApp</span>
+        </a>
+
+        <button id="menu-btn" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg text-slate-300 hover:bg-white/10">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-cardbg border-b border-white/10 px-4 pt-3 pb-5 space-y-3 text-sm font-medium">
+      <a href="#servicos" class="block py-1.5 text-slate-200 hover:text-nonorange">Serviços</a>
+      <a href="#oficina" class="block py-1.5 text-slate-200 hover:text-nonorange">A Oficina</a>
+      <a href="#avaliacoes" class="block py-1.5 text-slate-200 hover:text-nonorange">Avaliações</a>
+      <a href="#localizacao" class="block py-1.5 text-slate-200 hover:text-nonorange">Localização e Horários</a>
+      <a href="https://www.instagram.com/non_motos_/" target="_blank" rel="noopener noreferrer" class="block py-1.5 text-nonorange">
+        Instagram @non_motos_
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO COM FOTO REAL DA OFICINA -->
+  <section id="inicio" class="scroll-mt-20 relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="./assets/img/oficina-hero.jpg"
+        alt="Interior da oficina NON Moto Peças, Mecânica e Preparações, com piso modular, balcão de peças e moto em atendimento"
+        width="1600" height="1200"
+        fetchpriority="high"
+        class="w-full h-full object-cover object-center opacity-60"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-darkbg via-darkbg/80 to-darkbg/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-darkbg/80 via-transparent to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-nonorange/15 border border-nonorange/35 text-nonorange text-xs font-bold uppercase tracking-wider mb-5">
+          Moto Peças • Mecânica &amp; Preparações
+        </span>
+
+        <h1 class="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight text-white leading-[1.03]">
+          Mecânica, Preparações e Peças para a sua Moto
+        </h1>
+
+        <p class="mt-5 text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl">
+          Do alinhamento e troca de óleo até motor, injeção eletrônica, preparações e peças em geral. Estrutura completa, ferramental organizado e atendimento direto em Guarulhos.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3.5">
+          <a
+            href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20NON%20Motos%20e%20quero%20fazer%20um%20or%C3%A7amento."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 bg-whatsapp hover:bg-whatsapphover text-slate-950 font-bold text-base px-6 py-4 rounded-xl transition shadow-xl shadow-whatsapp/20"
+          >
+            Orçamento pelo WhatsApp
+          </a>
+
+          <a
+            href="#servicos"
+            class="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white font-semibold text-base px-6 py-4 rounded-xl transition"
+          >
+            Ver Todos os Serviços
+          </a>
+        </div>
+      </div>
+
+      <!-- Card Destaque com Logo -->
+      <div class="lg:col-span-5 hidden sm:block">
+        <div class="bg-cardbg/95 border border-white/10 rounded-2xl p-6 shadow-2xl">
+          <img
+            src="./assets/img/logo-non.webp"
+            alt="Emblema NON Moto Peças, Mecânica e Preparações"
+            width="497" height="512"
+            loading="lazy" decoding="async"
+            class="w-full max-h-64 object-contain rounded-xl bg-darkbg p-3"
+          />
+          <div class="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+            <span>Atendimento especializado</span>
+            <span class="text-nonorange font-semibold">@non_motos_</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE SERVIÇOS (BASEADO NO PAINEL REAL DA OFICINA) -->
+  <section id="servicos" class="scroll-mt-20 py-20 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div>
+        <span class="text-nonorange font-bold text-xs uppercase tracking-widest">Especialidades da casa</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl uppercase text-white mt-1">
+          Serviços e Peças
+        </h2>
+      </div>
+      <p class="text-slate-400 text-sm max-w-md">
+        Clique em qualquer especialidade para abrir o WhatsApp com a mensagem pronta para orçamento.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7ar%20Alinhamento%20para%20minha%20moto." target="_blank" rel="noopener noreferrer" class="bg-cardbg border border-white/10 hover:border-nonorange rounded-xl p-5 transition group">
+        <span class="text-nonorange font-display font-bold text-sm">01</span>
+        <h3 class="font-display font-bold text-xl uppercase text-white mt-1 group-hover:text-nonorange transition">Alinhamento</h3>
+        <p class="text-xs text-slate-400 mt-1.5">Volante alinhado, pneus durando mais e moto estável na curva.</p>
+      </a>
+
+      <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7ar%20servi%C3%A7o%20de%20Carbura%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="bg-cardbg border border-white/10 hover:border-nonorange rounded-xl p-5 transition group">
+        <span class="text-nonorange font-display font-bold text-sm">02</span>
+        <h3 class="font-display font-bold text-xl uppercase text-white mt-1 group-hover:text-nonorange transition">Carburação</h3>
+        <p class="text-xs text-slate-400 mt-1.5">Limpeza, regulagem e acerto de marcha lenta.</p>
+      </a>
+
+      <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Preciso%20de%20servi%C3%A7o%20na%20parte%20El%C3%A9trica%20da%20moto." target="_blank" rel="noopener noreferrer" class="bg-cardbg border border-white/10 hover:border-nonorange rounded-xl p-5 transition group">
+        <span class="text-nonorange font-display font-bold text-sm">03</span>
+        <h3 class="font-display font-bold text-xl uppercase text-white mt-1 group-hover:text-nonorange transition">Elétrica</h3>
+        <p class="text-xs text-slate-400 mt-1.5">Chicote, carga, partida, iluminação e sensores.</p>
+      </a>
+
+      <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7ar%20servi%C3%A7o%20ou%20troca%20de%20Escapamento." target="_blank" rel="noopener noreferrer" class="bg-cardbg border border-white/10 hover:border-nonorange rounded-xl p-5 transition group">
+        <span class="text-nonorange font-display font-bold text-sm">04</span>
+        <h3 class="font-display font-bold text-xl uppercase text-white mt-1 group-hover:text-nonorange transition">Escapamento</h3>
+        <p class="text-xs text-slate-400 mt-1.5">Instalação, vedação e manutenção do escape.</p>
+      </a>
+
+      <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7ar%20servi%C3%A7o%20de%20Inje%C3%A7%C3%A3o%20Eletr%C3%B4nica." target="_blank" rel="noopener noreferrer" class="bg-cardbg border border-white/10 hover:border-nonorange rounded-xl p-5 transition group">
+        <span class="text-nonorange font-display font-bold text-sm">05</span>
+        <h3 class="font-display font-bold text-xl uppercase text-white mt-1 group-hover:text-nonorange transition">Injeção Eletrônica</h3>
+        <p class="text-xs text-slate-400 mt-1.5">Scanner, limpeza de bicos e marcha lenta estável de novo.</p>
+      </a>
+
+      <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20servi%C3%A7o%20de%20Limpeza%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer" class="bg-cardbg border border-white/10 hover:border-nonorange rounded-xl p-5 transition group">
+        <span class="text-nonorange font-display font-bold text-sm">06</span>
+        <h3 class="font-display font-bold text-xl uppercase text-white mt-1 group-hover:text-nonorange transition">Limpeza</h3>
+        <p class="text-xs text-slate-400 mt-1.5">Limpeza técnica de componentes e moto.</p>
+      </a>
+
+      <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7ar%20revis%C3%A3o%20ou%20prepara%C3%A7%C3%A3o%20de%20Motor." target="_blank" rel="noopener noreferrer" class="bg-cardbg border border-white/10 hover:border-nonorange rounded-xl p-5 transition group">
+        <span class="text-nonorange font-display font-bold text-sm">07</span>
+        <h3 class="font-display font-bold text-xl uppercase text-white mt-1 group-hover:text-nonorange transition">Motor &amp; Preparações</h3>
+        <p class="text-xs text-slate-400 mt-1.5">Manutenção preventiva, reparos e preparações.</p>
+      </a>
+
+      <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20Pe%C3%A7as%20em%20Geral%20para%20moto." target="_blank" rel="noopener noreferrer" class="bg-cardbg border border-white/10 hover:border-nonorange rounded-xl p-5 transition group">
+        <span class="text-nonorange font-display font-bold text-sm">08</span>
+        <h3 class="font-display font-bold text-xl uppercase text-white mt-1 group-hover:text-nonorange transition">Peças em Geral</h3>
+        <p class="text-xs text-slate-400 mt-1.5">Balcão de peças de reposição e acessórios.</p>
+      </a>
+
+      <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7ar%20manuten%C3%A7%C3%A3o%20de%20Suspens%C3%A3o." target="_blank" rel="noopener noreferrer" class="bg-cardbg border border-white/10 hover:border-nonorange rounded-xl p-5 transition group">
+        <span class="text-nonorange font-display font-bold text-sm">09</span>
+        <h3 class="font-display font-bold text-xl uppercase text-white mt-1 group-hover:text-nonorange transition">Suspensão</h3>
+        <p class="text-xs text-slate-400 mt-1.5">Bengalas, retentores, óleo e amortecimento.</p>
+      </a>
+
+      <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7ar%20Troca%20de%20%C3%93leo%20para%20minha%20moto." target="_blank" rel="noopener noreferrer" class="bg-cardbg border border-white/10 hover:border-nonorange rounded-xl p-5 transition group">
+        <span class="text-nonorange font-display font-bold text-sm">10</span>
+        <h3 class="font-display font-bold text-xl uppercase text-white mt-1 group-hover:text-nonorange transition">Troca de Óleo</h3>
+        <p class="text-xs text-slate-400 mt-1.5">Óleo indicado pela montadora + filtro, com valor fechado antes do serviço.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- A OFICINA / PAINEL REAL -->
+  <section id="oficina" class="scroll-mt-20 py-16 bg-cardbg border-y border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="text-nonorange font-bold text-xs uppercase tracking-widest">Estrutura e Compromisso</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl uppercase text-white mt-1">
+          Compromisso em Cada Serviço
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+          Área de mecânica organizada, estoque de peças na parede, piso modular e balcão de atendimento para cuidar da sua moto com seriedade e respeito.
+        </p>
+        <blockquote class="mt-5 border-l-2 border-nonorange pl-4 text-sm text-slate-300 italic">
+          "Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos." (Provérbios 16:3) • Que Deus abençoe cada mão que trabalha aqui e cada cliente que por esta porta passar.
+        </blockquote>
+        <div class="mt-6">
+          <a
+            href="https://www.instagram.com/non_motos_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-nonorange hover:bg-nonorangehover text-slate-950 font-bold text-sm px-5 py-3 rounded-xl transition"
+          >
+            Acompanhar no Instagram @non_motos_
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-white/10 bg-darkbg shadow-xl">
+        <img
+          src="./assets/img/banner-servicos.jpg"
+          alt="Painel oficial de serviços da oficina NON Moto Peças, Mecânica e Preparações"
+          width="1400" height="434"
+          loading="lazy" decoding="async"
+          class="w-full h-auto object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES (somente dados reais) -->
+  <section id="avaliacoes" class="scroll-mt-20 py-20 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div>
+        <span class="text-nonorange font-bold text-xs uppercase tracking-widest">Confiança local</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl uppercase text-white mt-1">
+          Quem Confia no Trabalho
+        </h2>
+      </div>
+      <a
+        href="https://share.google/2DTcoq9zr0nIPFWyP"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm font-semibold text-nonorange hover:underline"
+      >
+        Ver perfil e avaliações no Google →
+      </a>
+    </div>
+
+    <div class="bg-cardbg border border-white/10 rounded-2xl p-8 sm:p-10 text-center">
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        Veja as avaliações reais de quem já levou a moto na NON. O perfil no Google está sempre atualizado com os depoimentos dos clientes.
+      </p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <a
+          href="https://share.google/2DTcoq9zr0nIPFWyP"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center bg-nonorange hover:bg-nonorangehover text-slate-950 font-bold text-sm px-6 py-3 rounded-xl transition"
+        >
+          Ler avaliações no Google
+        </a>
+        <a
+          href="https://g.page/r/CRJEW915KdMJEBM/review"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center bg-white/10 hover:bg-white/15 text-white font-semibold text-sm px-6 py-3 rounded-xl transition"
+        >
+          Deixar uma avaliação
+        </a>
+      </div>
+    </div>
+
+    <!--
+      MODELO PARA AVALIAÇÕES REAIS — copie este bloco 3x e substitua por citações
+      literais do perfil do Google (com nome e data). Nunca invente depoimentos.
+
+      <div class="bg-cardbg border border-white/10 rounded-2xl p-6">
+        <div class="text-amber-400 text-sm tracking-widest mb-3">★★★★★</div>
+        <p class="text-sm text-slate-300 leading-relaxed">"TEXTO LITERAL DA AVALIAÇÃO"</p>
+        <p class="text-xs font-semibold text-slate-400 mt-4 uppercase">Nome • Google • data</p>
+      </div>
+    -->
+  </section>
+
+  <!-- LOCALIZAÇÃO E CONTATO -->
+  <section id="localizacao" class="scroll-mt-20 py-20 bg-cardbg border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="text-nonorange font-bold text-xs uppercase tracking-widest">Onde estamos</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl uppercase text-white mt-1">
+          Visite a Oficina
+        </h2>
+        <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+          Tire dúvidas sobre peças, agendamentos ou preparações diretamente pelo WhatsApp ou confira a rota no mapa.
+        </p>
+
+        <ul class="mt-6 space-y-4 text-sm text-slate-300">
+          <li>
+            <strong class="block text-white uppercase text-xs tracking-wider">WhatsApp:</strong>
+            <a href="https://wa.me/5511940397294" target="_blank" rel="noopener noreferrer" class="text-whatsapp hover:underline font-medium">
+              (11) 94039-7294
+            </a>
+          </li>
+          <li>
+            <strong class="block text-white uppercase text-xs tracking-wider">Instagram:</strong>
+            <a href="https://www.instagram.com/non_motos_/" target="_blank" rel="noopener noreferrer" class="text-nonorange hover:underline">
+              @non_motos_
+            </a>
+          </li>
+          <li>
+            <strong class="block text-white uppercase text-xs tracking-wider">Região:</strong>
+            <span>Guarulhos — SP</span>
+          </li>
+          <!-- PREENCHER: endereço completo e horários reais do perfil do Google -->
+          <!--
+          <li>
+            <strong class="block text-white uppercase text-xs tracking-wider">Endereço:</strong>
+            <span>RUA, NÚMERO — BAIRRO, Guarulhos/SP — CEP</span>
+          </li>
+          <li>
+            <strong class="block text-white uppercase text-xs tracking-wider">Horário:</strong>
+            <span>Seg–Sex: 00h às 00h | Sáb: 00h às 00h</span>
+          </li>
+          -->
+        </ul>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a
+            href="https://share.google/2DTcoq9zr0nIPFWyP"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center bg-nonorange hover:bg-nonorangehover text-slate-950 font-bold text-sm px-5 py-3 rounded-xl transition"
+          >
+            Abrir rota no Google Maps
+          </a>
+          <a
+            href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Gostaria%20de%20confirmar%20a%20localiza%C3%A7%C3%A3o%20e%20hor%C3%A1rio%20de%20atendimento."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center bg-white/10 hover:bg-white/15 text-white font-semibold text-sm px-5 py-3 rounded-xl transition"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!--
+        MAPA: este bloco é leve e não mostra local errado.
+        Para mostrar o mapa real, substitua este <a> pelo iframe de
+        Google Maps → Compartilhar → Incorporar um mapa.
+      -->
+      <a
+        href="https://share.google/2DTcoq9zr0nIPFWyP"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir localização da oficina no Google Maps"
+        class="group relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-white/10 bg-darkbg flex flex-col items-center justify-center gap-3 hover:border-nonorange/50 transition"
+      >
+        <div class="absolute inset-0 opacity-20" style="background-image:linear-gradient(rgba(249,115,22,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.18) 1px,transparent 1px);background-size:32px 32px;"></div>
+        <svg class="relative w-12 h-12 text-nonorange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+        </svg>
+        <span class="relative font-display font-bold text-xl uppercase text-white group-hover:text-nonorange transition">Ver oficina no mapa</span>
+        <span class="relative text-xs text-slate-400">Guarulhos — SP • Abrir no Google Maps</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-darkbg border-t border-white/10 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© <span id="ano-atual">2026</span> NON Moto Peças, Mecânica &amp; Preparações. Todos os direitos reservados.</p>
+      <div class="flex items-center gap-5">
+        <a href="https://www.instagram.com/non_motos_/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300">Instagram</a>
+        <a href="https://wa.me/5511940397294" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300">WhatsApp</a>
+        <a href="https://share.google/2DTcoq9zr0nIPFWyP" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300">Google Perfil</a>
+        <a href="https://g.page/r/CRJEW915KdMJEBM/review" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300">Avaliar no Google</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a
+    href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20NON%20Motos."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Conversar no WhatsApp"
+    class="fixed bottom-5 right-5 z-50 flex items-center gap-2 bg-whatsapp hover:bg-whatsapphover text-slate-950 font-bold text-sm px-4 py-3.5 rounded-full shadow-2xl shadow-black/50 transition transform hover:scale-105"
+  >
+    <span>WhatsApp</span>
+  </a>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
