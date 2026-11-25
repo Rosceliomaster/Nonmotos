@@ -79,11 +79,12 @@
           <span class="text-nonorange font-bold text-xs uppercase tracking-widest">Bastidores</span>
           <h2 class="font-display font-extrabold text-3xl uppercase text-white mt-1">A Oficina por Dentro</h2>
         </div>
-        <span class="text-xs text-slate-500 hidden sm:block">Use as setas para navegar</span>
+        <span class="text-xs text-slate-500 hidden sm:block">Use as setas ou deslize no celular</span>
       </div>
 
       <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-cardbg">
         <div id="slide" class="relative h-72 sm:h-[420px]"></div>
+        <div id="contador" class="absolute top-4 right-4 z-10 px-3 py-1.5 rounded-full bg-black/70 border border-white/20 text-xs font-semibold text-white">01 / 05</div>
 
         <button id="prev" aria-label="Foto anterior" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 text-white text-xl transition">‹</button>
         <button id="next" aria-label="Próxima foto" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 text-white text-xl transition">›</button>
@@ -93,10 +94,8 @@
       <p class="text-xs text-slate-500 mt-3 text-center" id="legenda"></p>
 
       <!--
-        PARA ADICIONAR MAIS FOTOS DEPOIS:
-        Copie um dos objetos do array "fotos" no script abaixo e troque
-        imagem/titulo/legenda. Salve a imagem em assets/img/ e use
-        o caminho "../assets/img/nome-da-foto.jpg".
+        As 5 fotos do carrossel estao em assets/img/foto1.jpg a foto5.jpg.
+        Para tropar uma foto, substitua o arquivo mantendo o mesmo nome.
       -->
     </section>
 
@@ -133,14 +132,34 @@
   <script>
     const fotos = [
       {
-        imagem: '../assets/img/oficina-hero.jpg',
-        titulo: 'Estrutura completa',
-        legenda: 'Área de mecânica organizada, piso modular e balcão de peças em Guarulhos.'
+        imagem: '../assets/img/foto1.jpg',
+        tag: 'Recepção & Estrutura',
+        titulo: 'Entrada da NON Moto Peças, Mecânica & Preparações',
+        legenda: 'Ambiente completo com piso modular, balcão de peças e painel iluminado.'
       },
       {
-        imagem: '../assets/img/banner-servicos.jpg',
-        titulo: 'Serviços especializados',
-        legenda: 'Alinhamento, carburação, elétrica, injeção, motor, suspensão e muito mais.'
+        imagem: '../assets/img/foto2.jpg',
+        tag: 'Ambiente Interno',
+        titulo: 'Vista Ampla da Estrutura e do Estoque',
+        legenda: 'Estoque de peças na parede e bancadas organizadas para agilidade no atendimento.'
+      },
+      {
+        imagem: '../assets/img/foto3.jpg',
+        tag: 'Elevador Hidráulico',
+        titulo: 'Inspeção Técnica de Roda, Freio e Alinhamento',
+        legenda: 'Inspeção de roda dianteira, sistema de freio e alinhamento direto no elevador.'
+      },
+      {
+        imagem: '../assets/img/foto4.jpg',
+        tag: 'Precisão nos Comandos',
+        titulo: 'Ajuste Fino e Regulagem no Guidão',
+        legenda: 'Ajuste de manetes e cabos no guidão para pilotagem segura e precisa.'
+      },
+      {
+        imagem: '../assets/img/foto5.jpg',
+        tag: 'Compromisso Técnico',
+        titulo: 'Atendimento Direto à Frente da NON Motos',
+        legenda: 'Atendimento direto e responsabilidade técnica em Guarulhos — SP.'
       }
     ];
 
@@ -148,18 +167,26 @@
     const slide = document.getElementById('slide');
     const dots = document.getElementById('dots');
     const legenda = document.getElementById('legenda');
+    const contador = document.getElementById('contador');
 
     function mostrar(i) {
       atual = (i + fotos.length) % fotos.length;
       const f = fotos[atual];
       slide.innerHTML = `
-        <img src="${f.imagem}" alt="${f.titulo}" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+        <img src="${f.imagem}" alt="${f.titulo}" class="w-full h-full object-cover"
+             onerror="this.style.display='none';document.getElementById('fallback').classList.remove('hidden')" />
+        <div id="fallback" class="hidden absolute inset-0 flex flex-col items-center justify-center gap-3 text-center modular-grid" style="background-image:linear-gradient(rgba(249,115,22,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.10) 1px,transparent 1px);background-size:28px 28px;background-color:#16181D">
+          <span class="text-nonorange text-xs font-bold uppercase tracking-widest">${f.tag}</span>
+          <span class="text-slate-400 text-xs">Foto em breve</span>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 p-6 sm:p-8">
-          <h3 class="font-display font-extrabold text-2xl sm:text-3xl uppercase text-white">${f.titulo}</h3>
+          <span class="text-nonorange text-[11px] font-bold uppercase tracking-widest">${f.tag}</span>
+          <h3 class="font-display font-extrabold text-2xl sm:text-3xl uppercase text-white mt-1">${f.titulo}</h3>
           <p class="text-xs sm:text-sm text-slate-200 mt-1 max-w-lg">${f.legenda}</p>
         </div>`;
-      legenda.textContent = `${atual + 1} de ${fotos.length}`;
+      contador.textContent = String(atual + 1).padStart(2, '0') + ' / ' + String(fotos.length).padStart(2, '0');
+      legenda.textContent = `${f.tag} — ${atual + 1} de ${fotos.length}`;
       dots.innerHTML = fotos.map((_, d) =>
         `<button aria-label="Ir para foto ${d + 1}" data-i="${d}" class="w-2.5 h-2.5 rounded-full transition ${d === atual ? 'bg-nonorange w-6' : 'bg-white/50 hover:bg-white'}"></button>`
       ).join('');
@@ -174,6 +201,15 @@
       if (e.key === 'ArrowLeft') mostrar(atual - 1);
       if (e.key === 'ArrowRight') mostrar(atual + 1);
     });
+
+    let x0 = null;
+    slide.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    slide.addEventListener('touchend', (e) => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 50) mostrar(atual + (dx < 0 ? 1 : -1));
+      x0 = null;
+    }, { passive: true });
 
     mostrar(0);
     document.getElementById('ano-atual').textContent = new Date().getFullYear();

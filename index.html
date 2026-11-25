@@ -62,8 +62,14 @@
     "areaServed": ["Guarulhos", "Grande São Paulo"],
     "sameAs": [
       "https://www.instagram.com/non_motos_/",
-      "https://share.google/2DTcoq9zr0nIPFWyP"
+      "https://share.google/2DTcoq9zr0nIPFWyP",
+      "https://maps.app.goo.gl/dtbdqzU2WCCqD5Gu6"
     ],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.4367823,
+      "longitude": -46.5180825
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Guarulhos",
@@ -422,7 +428,7 @@
 
         <div class="mt-8 flex flex-wrap gap-3">
           <a
-            href="https://share.google/2DTcoq9zr0nIPFWyP"
+            href="https://maps.app.goo.gl/dtbdqzU2WCCqD5Gu6"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center bg-nonorange hover:bg-nonorangehover text-slate-950 font-bold text-sm px-5 py-3 rounded-xl transition"
@@ -440,25 +446,23 @@
         </div>
       </div>
 
-      <!--
-        MAPA: este bloco é leve e não mostra local errado.
-        Para mostrar o mapa real, substitua este <a> pelo iframe de
-        Google Maps → Compartilhar → Incorporar um mapa.
-      -->
+      <!-- Mapa real da NON Cardoso Motos — coords -23.4367823, -46.5180825 -->
+      <div class="w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-white/10 bg-darkbg">
+        <iframe
+          title="Mapa NON Moto Peças, Mecânica e Preparações — Guarulhos"
+          src="https://www.google.com/maps?q=-23.4367823,-46.5180825&z=17&output=embed"
+          class="w-full h-full border-0 grayscale contrast-125 opacity-90"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
       <a
-        href="https://share.google/2DTcoq9zr0nIPFWyP"
+        href="https://maps.app.goo.gl/dtbdqzU2WCCqD5Gu6"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Abrir localização da oficina no Google Maps"
-        class="group relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-white/10 bg-darkbg flex flex-col items-center justify-center gap-3 hover:border-nonorange/50 transition"
+        class="mt-3 inline-flex items-center text-xs font-semibold text-nonorange hover:underline"
       >
-        <div class="absolute inset-0 opacity-20" style="background-image:linear-gradient(rgba(249,115,22,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.18) 1px,transparent 1px);background-size:32px 32px;"></div>
-        <svg class="relative w-12 h-12 text-nonorange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-        </svg>
-        <span class="relative font-display font-bold text-xl uppercase text-white group-hover:text-nonorange transition">Ver oficina no mapa</span>
-        <span class="relative text-xs text-slate-400">Guarulhos — SP • Abrir no Google Maps</span>
+        Abrir no Google Maps ↗
       </a>
     </div>
   </section>
