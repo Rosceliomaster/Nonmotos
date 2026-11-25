@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviços | NON Moto Peças, Mecânica &amp; Preparações — Guarulhos</title>
+  <meta name="description" content="Conheça em detalhes os 10 serviços da NON: alinhamento, carburação, elétrica, escapamento, injeção eletrônica, limpeza, motor, peças, suspensão e troca de óleo. Orçamento pelo WhatsApp." />
+  <meta name="theme-color" content="#0B0B0D" />
+  <link rel="icon" type="image/jpeg" href="../assets/img/logo-non.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { display: ['"Barlow Condensed"', 'sans-serif'], sans: ['Inter', 'sans-serif'] },
+      colors: { darkbg: '#0B0B0D', cardbg: '#16181D', nonorange: '#F97316', nonorangehover: '#EA580C', whatsapp: '#25D366', whatsapphover: '#1EBE5D' }
+    } } };
+  </script>
+</head>
+<body class="bg-darkbg text-slate-100 font-sans antialiased selection:bg-nonorange selection:text-slate-950">
+
+  <header class="fixed top-0 inset-x-0 z-50 bg-darkbg/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group">
+        <img src="../assets/img/logo-non.jpg" alt="Logo NON" width="40" height="40" class="w-10 h-10 rounded-lg object-cover border border-nonorange/40" />
+        <span class="font-display font-extrabold text-xl tracking-wide uppercase text-white group-hover:text-nonorange transition">NON <span class="text-nonorange">Motos</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="/" class="hover:text-nonorange transition">Início</a>
+        <a href="/servicos/" class="text-nonorange">Serviços</a>
+        <a href="/historia/" class="hover:text-nonorange transition">História</a>
+        <a href="/#avaliacoes" class="hover:text-nonorange transition">Avaliações</a>
+      </nav>
+      <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20NON%20Motos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-whatsapp hover:bg-whatsapphover text-slate-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-lg transition shadow-lg shadow-whatsapp/20">Chamar no WhatsApp</a>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-20">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6">
+      <span class="text-nonorange font-bold text-xs uppercase tracking-widest">Especialidades da casa</span>
+      <h1 class="font-display font-extrabold text-4xl sm:text-5xl uppercase text-white mt-1 leading-none">Serviços em Detalhe</h1>
+      <p class="text-slate-300 text-sm sm:text-base mt-4 max-w-2xl leading-relaxed">
+        Cada serviço abaixo é executado com diagnóstico prévio e orçamento aprovado antes de qualquer intervenção. Escolha a especialidade e fale direto com a equipe no WhatsApp — (11) 94039-7294.
+      </p>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5" id="lista-servicos"></div>
+    </section>
+  </main>
+
+  <footer class="bg-cardbg border-t border-white/10 py-10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-5 text-xs text-slate-400">
+      <p>© <span id="ano-atual">2026</span> NON Moto Peças, Mecânica &amp; Preparações — Guarulhos/SP</p>
+      <nav class="flex flex-wrap items-center justify-center gap-5">
+        <a href="/" class="hover:text-white">Início</a>
+        <a href="/servicos/" class="text-nonorange">Serviços</a>
+        <a href="/historia/" class="hover:text-white">História</a>
+        <a href="https://www.instagram.com/non_motos_/" target="_blank" rel="noopener noreferrer" class="hover:text-white">Instagram</a>
+        <a href="https://share.google/2DTcoq9zr0nIPFWyP" target="_blank" rel="noopener noreferrer" class="hover:text-white">Google</a>
+        <a href="https://g.page/r/CRJEW915KdMJEBM/review" target="_blank" rel="noopener noreferrer" class="hover:text-white">Avaliar no Google</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20servi%C3%A7os%20da%20NON%20Motos." target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp" class="fixed bottom-5 right-5 z-50 bg-whatsapp hover:bg-whatsapphover text-slate-950 font-bold text-sm px-4 py-3.5 rounded-full shadow-2xl shadow-black/50 transition transform hover:scale-105">WhatsApp</a>
+
+  <script>
+    const servicos = [
+      ['01', 'Alinhamento', 'Direção firme e desgaste uniforme dos pneus.', 'Verificação de geometria, caixa de direção, bengalas e conjunto de rodas.'],
+      ['02', 'Carburação', 'Marcha lenta estável e aceleração sem falhas.', 'Limpeza do carburador, regulagem de mistura e acerto de marcha lenta.'],
+      ['03', 'Elétrica', 'Partida confiante e iluminação em dia.', 'Bateria, sistema de carga, chicote, conectores, sensores e iluminação.'],
+      ['04', 'Escapamento', 'Vedação, encaixe e acabamento do escape.', 'Instalação de escapamentos, troca de juntas e correção de vazamentos.'],
+      ['05', 'Injeção Eletrônica', 'Diagnóstico com scanner e acerto preciso.', 'Leitura de falhas, limpeza de bicos, corpo de borboleta e sensores.'],
+      ['06', 'Limpeza', 'Componentes limpos e moto apresentável.', 'Limpeza técnica de peças, motor e areas de difícil acesso.'],
+      ['07', 'Motor & Preparações', 'Manutenção preventiva e melhoria de desempenho.', 'Revisão de motor, regulagem de válvulas, retífica e preparações.'],
+      ['08', 'Peças em Geral', 'Peça certa, procedência e aplicação correta.', 'Balcão com reposição, baterias, lâmpadas e acessórios para motos.'],
+      ['09', 'Suspensão', 'Conforto e firmeza de volta na moto.', 'Bengalas, retentores, óleo da suspensão e caixa de direção.'],
+      ['10', 'Troca de Óleo', 'Motor protegido com o lubrificante correto.', 'Óleo indicado pela montadora, filtro e verificação de vazamentos.']
+    ];
+    const lista = document.getElementById('lista-servicos');
+    lista.innerHTML = servicos.map(([n, titulo, beneficio, detalhe]) => {
+      const msg = encodeURIComponent(`Olá! Gostaria de um orçamento para ${titulo}.`);
+      return `<article class="bg-cardbg border border-white/10 hover:border-nonorange/60 rounded-2xl p-6 transition flex flex-col justify-between">
+        <div>
+          <span class="text-nonorange font-display font-bold text-sm">${n}</span>
+          <h2 class="font-display font-bold text-2xl uppercase text-white mt-1">${titulo}</h2>
+          <p class="text-sm text-slate-200 mt-3 font-medium">${beneficio}</p>
+          <p class="text-xs text-slate-400 mt-2 leading-relaxed">${detalhe}</p>
+        </div>
+        <a href="https://wa.me/5511940397294?text=${msg}" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center text-sm font-semibold text-nonorange hover:text-white transition">Orçar ${titulo} →</a>
+      </article>`;
+    }).join('');
+    document.getElementById('ano-atual').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>História do Non | NON Moto Peças, Mecânica &amp; Preparações</title>
+  <meta name="description" content="Conheça a história e a estrutura da NON Moto Peças, Mecânica & Preparações em Guarulhos: ferramental organizado, balcão de peças e compromisso com cada cliente." />
+  <meta name="theme-color" content="#0B0B0D" />
+  <link rel="icon" type="image/jpeg" href="../assets/img/logo-non.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { display: ['"Barlow Condensed"', 'sans-serif'], sans: ['Inter', 'sans-serif'] },
+      colors: { darkbg: '#0B0B0D', cardbg: '#16181D', nonorange: '#F97316', nonorangehover: '#EA580C', whatsapp: '#25D366', whatsapphover: '#1EBE5D' }
+    } } };
+  </script>
+</head>
+<body class="bg-darkbg text-slate-100 font-sans antialiased selection:bg-nonorange selection:text-slate-950">
+
+  <header class="fixed top-0 inset-x-0 z-50 bg-darkbg/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group">
+        <img src="../assets/img/logo-non.jpg" alt="Logo NON" width="40" height="40" class="w-10 h-10 rounded-lg object-cover border border-nonorange/40" />
+        <span class="font-display font-extrabold text-xl tracking-wide uppercase text-white group-hover:text-nonorange transition">NON <span class="text-nonorange">Motos</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="/" class="hover:text-nonorange transition">Início</a>
+        <a href="/servicos/" class="hover:text-nonorange transition">Serviços</a>
+        <a href="/historia/" class="text-nonorange">História</a>
+        <a href="/#avaliacoes" class="hover:text-nonorange transition">Avaliações</a>
+      </nav>
+      <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20da%20hist%C3%B3ria%20da%20NON%20Motos." target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-whatsapp hover:bg-whatsapphover text-slate-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-lg transition shadow-lg shadow-whatsapp/20">Chamar no WhatsApp</a>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-20">
+    <!-- HISTÓRIA -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6">
+      <span class="text-nonorange font-bold text-xs uppercase tracking-widest">Sobre a oficina</span>
+      <h1 class="font-display font-extrabold text-4xl sm:text-5xl uppercase text-white mt-1 leading-none">A História do Non</h1>
+      <div class="mt-7 space-y-5 text-sm sm:text-base text-slate-300 leading-relaxed">
+        <p>
+          A NON Moto Peças, Mecânica &amp; Preparações nasceu do contato diário com motocicletas e da vontade de fazer um trabalho honesto: diagnosticar antes de trocar, explicar antes de cobrar e entregar no prazo combinado.
+        </p>
+        <p>
+          Essa trajetória transformou a oficina em um espaço com área de mecânica organizada, piso modular, balcão de peças e ferramental à mão — estrutura pensada para agilizar o serviço e dar transparência a quem entra pela porta.
+        </p>
+        <p>
+          Na parede da oficina fica o lembrete que guia a equipe: <em class="text-white not-italic">"Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos."</em> (Provérbios 16:3). É com esse espírito que cada moto é recebida e cada cliente é atendido.
+        </p>
+        <!-- Quando tiver os marcos reais (ano de abertura, número de clientes, conquistas), adicione aqui. -->
+      </div>
+
+      <blockquote class="mt-8 border-l-2 border-nonorange pl-5 text-sm text-slate-300 italic">
+        Que Deus abençoe cada mão que trabalha aqui e cada cliente que por esta porta passar.
+      </blockquote>
+    </section>
+
+    <!-- CARROSSEL -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 mt-16">
+      <div class="flex items-end justify-between mb-5 gap-4">
+        <div>
+          <span class="text-nonorange font-bold text-xs uppercase tracking-widest">Bastidores</span>
+          <h2 class="font-display font-extrabold text-3xl uppercase text-white mt-1">A Oficina por Dentro</h2>
+        </div>
+        <span class="text-xs text-slate-500 hidden sm:block">Use as setas para navegar</span>
+      </div>
+
+      <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-cardbg">
+        <div id="slide" class="relative h-72 sm:h-[420px]"></div>
+
+        <button id="prev" aria-label="Foto anterior" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 text-white text-xl transition">‹</button>
+        <button id="next" aria-label="Próxima foto" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 text-white text-xl transition">›</button>
+
+        <div id="dots" class="absolute bottom-4 left-0 right-0 flex justify-center gap-2"></div>
+      </div>
+      <p class="text-xs text-slate-500 mt-3 text-center" id="legenda"></p>
+
+      <!--
+        PARA ADICIONAR MAIS FOTOS DEPOIS:
+        Copie um dos objetos do array "fotos" no script abaixo e troque
+        imagem/titulo/legenda. Salve a imagem em assets/img/ e use
+        o caminho "../assets/img/nome-da-foto.jpg".
+      -->
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 mt-16">
+      <div class="bg-cardbg border border-white/10 rounded-2xl p-8 sm:p-10 text-center">
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl uppercase text-white">Gostou do que viu?</h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-3 max-w-xl mx-auto">Conheça os serviços ou fale direto com a equipe e receba seu orçamento pelo WhatsApp.</p>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <a href="/servicos/" class="inline-flex items-center bg-nonorange hover:bg-nonorangehover text-slate-950 font-bold text-sm px-6 py-3 rounded-xl transition">Ver Serviços</a>
+          <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Conheci%20a%20NON%20Motos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-whatsapp hover:bg-whatsapphover text-slate-950 font-bold text-sm px-6 py-3 rounded-xl transition">Chamar no WhatsApp</a>
+          <a href="https://www.instagram.com/non_motos_/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-white/10 hover:bg-white/15 text-white font-semibold text-sm px-6 py-3 rounded-xl transition">@non_motos_</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-cardbg border-t border-white/10 py-10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-5 text-xs text-slate-400">
+      <p>© <span id="ano-atual">2026</span> NON Moto Peças, Mecânica &amp; Preparações — Guarulhos/SP</p>
+      <nav class="flex flex-wrap items-center justify-center gap-5">
+        <a href="/" class="hover:text-white">Início</a>
+        <a href="/servicos/" class="hover:text-white">Serviços</a>
+        <a href="/historia/" class="text-nonorange">História</a>
+        <a href="https://www.instagram.com/non_motos_/" target="_blank" rel="noopener noreferrer" class="hover:text-white">Instagram</a>
+        <a href="https://share.google/2DTcoq9zr0nIPFWyP" target="_blank" rel="noopener noreferrer" class="hover:text-white">Google</a>
+        <a href="https://g.page/r/CRJEW915KdMJEBM/review" target="_blank" rel="noopener noreferrer" class="hover:text-white">Avaliar no Google</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511940397294?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20da%20hist%C3%B3ria%20da%20NON%20Motos." target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp" class="fixed bottom-5 right-5 z-50 bg-whatsapp hover:bg-whatsapphover text-slate-950 font-bold text-sm px-4 py-3.5 rounded-full shadow-2xl shadow-black/50 transition transform hover:scale-105">WhatsApp</a>
+
+  <script>
+    const fotos = [
+      {
+        imagem: '../assets/img/oficina-hero.jpg',
+        titulo: 'Estrutura completa',
+        legenda: 'Área de mecânica organizada, piso modular e balcão de peças em Guarulhos.'
+      },
+      {
+        imagem: '../assets/img/banner-servicos.jpg',
+        titulo: 'Serviços especializados',
+        legenda: 'Alinhamento, carburação, elétrica, injeção, motor, suspensão e muito mais.'
+      }
+    ];
+
+    let atual = 0;
+    const slide = document.getElementById('slide');
+    const dots = document.getElementById('dots');
+    const legenda = document.getElementById('legenda');
+
+    function mostrar(i) {
+      atual = (i + fotos.length) % fotos.length;
+      const f = fotos[atual];
+      slide.innerHTML = `
+        <img src="${f.imagem}" alt="${f.titulo}" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-6 sm:p-8">
+          <h3 class="font-display font-extrabold text-2xl sm:text-3xl uppercase text-white">${f.titulo}</h3>
+          <p class="text-xs sm:text-sm text-slate-200 mt-1 max-w-lg">${f.legenda}</p>
+        </div>`;
+      legenda.textContent = `${atual + 1} de ${fotos.length}`;
+      dots.innerHTML = fotos.map((_, d) =>
+        `<button aria-label="Ir para foto ${d + 1}" data-i="${d}" class="w-2.5 h-2.5 rounded-full transition ${d === atual ? 'bg-nonorange w-6' : 'bg-white/50 hover:bg-white'}"></button>`
+      ).join('');
+      dots.querySelectorAll('button').forEach(b =>
+        b.addEventListener('click', () => mostrar(Number(b.dataset.i)))
+      );
+    }
+
+    document.getElementById('prev').addEventListener('click', () => mostrar(atual - 1));
+    document.getElementById('next').addEventListener('click', () => mostrar(atual + 1));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') mostrar(atual - 1);
+      if (e.key === 'ArrowRight') mostrar(atual + 1);
+    });
+
+    mostrar(0);
+    document.getElementById('ano-atual').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
