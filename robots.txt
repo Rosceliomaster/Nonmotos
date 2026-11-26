@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nonmotos.vercel.app/sitemap.xml
+Sitemap: https://www.nonmotos.com.br/sitemap.xml
